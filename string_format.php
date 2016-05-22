@@ -7,15 +7,13 @@ $n = $_POST['number'];
         if ($m >= $n) {
 
         // s の文字列を配列に格納
-        //for ($i=0 ; $i < $m ; $i++) {
-        //    $str[] = mb_substr($s, $i, 1, "UTF-8");
-        //}
-
-        $str_a = mb_substr($s, $n-1, 1, "UTF-8");
+        for ($i=0 ; $i < $m ; $i++) {
+            $str[] = mb_substr($s, $i, 1, "UTF-8");
+        }
 
         echo "文字列 " . $s . " の " . $n . " 番目の文字は ";
         // 指定文字を出力
-        echo $str_a;
+        echo $str[$n];
         echo " です。";
 
     } else {
